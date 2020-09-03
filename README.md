@@ -29,7 +29,7 @@ DB_URL=postgres://postgres:postgres@localhost:5432/millie
 COOKIE=ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE-123456789012345678901234567890
 ```
 
-Run the app in development mode. This will migrate the database and start the API:
+Run the app in development mode. This will migrate the database and start the API on port `4000`:
 
 ```bash
 yarn dev
