@@ -15,10 +15,6 @@ export class User {
   @Column({type: 'json', nullable: false})
   data: Obj;
 
-  //#region relations
-
-  //#endregion
-
   @CreateDateColumn()
   createdAt: Date;
 

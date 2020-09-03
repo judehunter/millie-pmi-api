@@ -1,6 +1,5 @@
 import {Connection, createConnection, getRepository, Repository} from 'typeorm';
 import {User} from '../entities/User';
-import * as Keyv from 'keyv';
 
 export async function connect() {
   await createConnection({
@@ -14,15 +13,12 @@ export async function connect() {
   });
 
   DB.users = getRepository(User);
-  DB.cache = new Keyv();
 }
 
 export const DB: {
   users: Repository<User>,
-  conn: Connection,
-  cache: typeof Keyv
+  conn: Connection
 } = {
   users: null,
-  conn: null,
-  cache: null
+  conn: null
 }

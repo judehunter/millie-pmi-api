@@ -8,7 +8,6 @@ import {connect} from './utils/db';
 import * as cors from '@koa/cors';
 import * as bodyParser from 'koa-bodyparser';
 import * as logger from 'koa-logger';
-import * as koaSession from 'koa-session';
 import router from './router';
 import {prepare} from './scraper';
 
@@ -20,9 +19,6 @@ import {prepare} from './scraper';
   app.use(cors());
   app.use(bodyParser());
   app.use(logger());
-
-  app.keys = ['millie'];
-  app.use(koaSession({}, app));
 
   app.use(router.routes()).use(router.allowedMethods());
 
