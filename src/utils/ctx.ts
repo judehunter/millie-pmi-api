@@ -1,4 +1,4 @@
-import {User} from '../entities/User';
+import {Obj} from './globals';
 
 export type CTX = {request: {body: any}};
-export type STATE = {user: User};
+export type STATE = Obj;
