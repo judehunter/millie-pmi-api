@@ -6,14 +6,14 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({nullable: true})
+  @Column()
   name: string;
 
-  @Column({nullable: true})
+  @Column()
   email: string;
 
-  @Column({type: 'json', nullable: true})
-  linkedInData: Obj;
+  @Column({type: 'json', nullable: false})
+  data: Obj;
 
   //#region relations
 
